@@ -12,7 +12,6 @@ var debounce = require('lodash.debounce');
 function getValueCountries (e) {
     e.preventDefault();
     const searchQuery = e.target.value.trim();
-    console.log(e);
     fetchCountries(searchQuery).then(data=>markup(data)).catch(err=>refs.country.innerHTML = `<p>${err}</p>`);
 }
 
