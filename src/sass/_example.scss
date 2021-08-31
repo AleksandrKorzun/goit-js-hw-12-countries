@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+}
+span {
+  font-weight: normal;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+};
+.countryInput{
+  margin-left: 15px;
+};
+.country{
+  text-align: center;
+}
+.title {
+  font-weight: bold;
+}
+.wrapper {
+  display: inline-block;
+  margin-right: 30px;
+}
