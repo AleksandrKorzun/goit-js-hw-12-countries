@@ -11,8 +11,13 @@ var debounce = require('lodash.debounce');
 
 function getValueCountries (e) {
     e.preventDefault();
+    // console.dir(e.target);
     const searchQuery = e.target.value.trim();
-    fetchCountries(searchQuery).then(data=>markup(data)).catch(err=>refs.country.innerHTML = `<p>${err}</p>`);
+    if (searchQuery) {
+        fetchCountries(searchQuery)
+        .then(data=> {if (data) markup(data)})
+        .catch(err=>refs.country.innerHTML = `<p>${err}</p>`);
+    }
 }
 
 
